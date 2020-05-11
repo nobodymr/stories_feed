@@ -1,0 +1,20 @@
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="googlebot" content="noindex"/>
+  <meta name="yandex" content="noindex"/>
+
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+  {% if site.plugins.jekyll-seo == nil %}
+    <title>{{ page.title }} - {{ site.title }}</title>
+
+    {% if page.description %}
+      <meta name="description" content="{{ page.description }}">
+    {% endif %}
+  {% endif %}
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
