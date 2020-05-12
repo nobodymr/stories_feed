@@ -1,4 +1,5 @@
 {% include head.html %}
+<script type="text/javascript" src="https://nobodymr.github.io/stories_feed/assets/typehome.js"></script>
 
 <a href="https://nobodymr.github.io/stories_feed/feed.xml" target="_blank" rel="noopener noreferrer nofollow">RSS latest 3</a>
 <a href="https://nobodymr.github.io/stories_feed/allfeeds.xml" target="_blank" rel="noopener noreferrer nofollow">RSS all posts</a>
