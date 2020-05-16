@@ -4,33 +4,13 @@ title: Stories
 ---
 {% include head.html %}
 
-{% for post in site.posts  %}
-  {% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
-  {% capture this_month %}{{ post.date | date: "%B" }}{% endcapture %}
-  {% capture next_year %}{{ post.previous.date | date: "%Y" }}{% endcapture %}
-  {% capture next_month %}{{ post.previous.date | date: "%B" }}{% endcapture %}
-  {% if forloop.first %}
-  <h2 id="{{ this_year }}-ref">{{this_year}}</h2>
-  <h3 id="{{ this_year }}-{{ this_month }}-ref">{{ this_month }}</h3>
-  <ul>
-  {% endif %}
+{% for post in site.posts  %}{% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}{% capture this_month %}{{ post.date | date: "%m" }}{% endcapture %}{% capture next_year %}{{ post.previous.date | date: "%Y" }}{% endcapture %}{% capture next_month %}{{ post.previous.date | date: "%m" }}{% endcapture %}
+  {% if forloop.first %}<h2 id="{{ this_year }}-{{ this_month }}-ref">{{ this_year }}.{{ this_month }}</h2><ul>{% endif %}
   <li><a rel="noopener noreferrer nofollow" target="_blank" href="https://server.makestories.io/preview/{{ post.storyid }}/">{{ post.title }}<span class="badge badge-secondary ml-1">{{ post.date | date: "%d.%m.%Y" }}</span></a></li>
-  {% if forloop.last %}
-  </ul>
-  {% else %}
-  {% if this_year != next_year %}
-  </ul>
-  <h2 id="{{ next_year }}-ref">{{next_year}}</h2>
-  <h3 id="{{ next_year }}-{{ next_month }}-ref">{{ next_month }}</h3>
-  <ul>
-  {% else %}    
-  {% if this_month != next_month %}
-  </ul>
-  <h3 id="{{ this_year }}-{{ next_month }}-ref">{{ next_month }}</h3>
-  <ul>
+  {% if forloop.last %}</ul>{% else %}
+  {% if this_year != next_year %}</ul><h2 id="{{ next_year }}-{{ next_month }}-ref">{{ next_year }}.{{ next_month }}</h2><ul>{% else %}
+  {% if this_month != next_month %}</ul><h2 id="{{ this_year }}-{{ next_month }}-ref">{{ this_year }}.{{ next_month }}</h2><ul>{% endif %}{% endif %}
   {% endif %}
-  {% endif %}
-{% endif %}
 {% endfor %}
 
 <div class="fixed-bottom bg-dark text-white">
