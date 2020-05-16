@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Stories
 ---
 {% include head.html %}
