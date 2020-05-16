@@ -7,7 +7,7 @@ title: Stories
 <ul>
 {% for post in site.posts %}
 <li>
-<a rel="noopener noreferrer nofollow" target="_blank" href="https://onl.st/{{ post.storyid }}/">{{ post.title }}<span class="badge badge-secondary ml-1">{{ post.date | date: "%d.%m.%Y" }}</span></a>
+<a rel="noopener noreferrer nofollow" target="_blank" href="https://server.makestories.io/preview/{{ post.storyid }}/">{{ post.title }}<span class="badge badge-secondary ml-1">{{ post.date | date: "%d.%m.%Y" }}</span></a>
 </li>
 {% endfor %}
 </ul>
