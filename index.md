@@ -2,6 +2,7 @@
 title: Stories
 ---
 {% include head.html %}
+
 <ul>
 {% for post in site.posts %}
 <li>
