@@ -3,7 +3,8 @@ $.fn.jQuerySimpleCounter=function(t){var e=$.extend({start:0,end:100,easing:"swi
 $('#number_hatmkarda').jQuerySimpleCounter({end: 810,duration: 3000});
 $('#number_jahon').jQuerySimpleCounter({end: 47,duration: 3000});
 $('#number_jumhuri').jQuerySimpleCounter({end: 74,duration: 3000});
-$('#number_viloyat').jQuerySimpleCounter({end: 576,duration: 3000});
+$('#number_viloyat').jQuerySimpleCounter({end: 176,duration: 3000});
+$('#number_shahr').jQuerySimpleCounter({end: 344,duration: 3000});
 $('#number_koriilmi').jQuerySimpleCounter({end: 139,duration: 3000});
 $('#number_kormand').jQuerySimpleCounter({end: 105,duration: 3000});
 $('#number_honanda').jQuerySimpleCounter({end: 850,duration: 3000});
